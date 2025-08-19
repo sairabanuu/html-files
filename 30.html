@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <!-- 
+    Regular expression
+    .(dot)-any char
+    +-one are more prev
+    -to
+    []-we write a-z,A-Z,0-9 inside of brackets shortcut of [a-z]-[/d],[A-Z]-[/w],[0-9]-[]
+    ^-staring of pattern not compulsory follow this rule-[^]
+    {single}-nprmal range[9]
+    {start,}-start range
+    {start,endrange}
+    /
+    ()
+    |
+
+    space
+     -->
+     <form action="submit.html">
+        <!-- <input type="text" placeholder="enter a Hh@81" pattern="Hh@81" required>
+        <br>
+        <input type="text" placeholder="enter num 123" pattern="123" title="enter 123" required><br>
+         <input type="text" placeholder="enter alfa abc" pattern="abc" title="enter abc" required><br>
+          <input type="text" placeholder="enter alfa ABC" pattern="ABC" title="enter ABC" required>
+          <input type="text" placeholder="enter a any one" pattern="." title=""enter a any one" required>  -->
+        <!-- <input type="text" pattern="[a-z 0-9 A-Z , . +]+"> -->
+         <!-- <input type="text" pattern="[^abc]"> -->
+         <input type="text" pattern="/+91 [6-9]{0-9}{9}">
+         <input type="text"  pattern="5[0-9]{5}">
+          <input type="submit">
+    </form>
+</body>
+</html>
