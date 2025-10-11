@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: lightskyblue;
+    width: 650px;
+    height: 450px;
+    margin-top:50px;
+    padding-top:20px;
+    text-align: center;
+    justify-content: center;
+    border:20px solid 
+}
+.container1{
+    background-color: lightgreen;
+    width: 650px;
+    height: 450px; 
+    margin-top:50px;
+    padding-top:20px;
+    text-align: center;
+    border:20px solid
+}
+.container2{
+    background-color: lightblue;
+    width: 650px;
+    height: 450px;
+    margin-top:50px;
+    padding-top:20px;
+    text-align: center;
+    border:20px solid 
+}

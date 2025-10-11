@@ -1,0 +1,18 @@
+.nav-container{
+    border: 2px solid;
+    position: relative;
+    padding: 8px;
+}
+.first-container{
+    display: inline-block;
+
+}
+.second-container{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.Project.About.Contact{
+    display: inline-block;
+    margin-right: 9px;
+}

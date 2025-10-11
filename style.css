@@ -1,11 +1,28 @@
-body{
-    background-color: antiquewhite;
+/* body{
+    background-color: lightpink;
+}
+h1{
+    color: red;
 }
 h2{
-    color: red;
+    color: darkgreen;
+}
+p{
+    color:darkblue
 }
 
 img{
     width: 30%
     
+} */
+.container{
+    padding: 10px;
+    border: 2px solid;
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+}
+.item1{
+    padding: 10px;
+
 }

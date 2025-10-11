@@ -1,0 +1,48 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+  .img{
+    width: 500%;
+    height:500%
+  
+  }
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      background: rgba(200, 200, 200, 0.9); 
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    }
+
+    
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      padding:  15px 17px;
+      transition: 0.3s;
+       }
+
+    .navbar a:hover {
+      border-radius: 5px;
+    }
+
+  
+    .logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 90%;
+      background: black;
+    }
