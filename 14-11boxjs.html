@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            padding: 20px;
+        }
+        .btn{
+            padding: 20px;
+            margin:5px;
+            cursor:pointer;
+            border:none;
+            color: wheat;
+            font-weight: bold;
+    
+        }
+        #container{
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .box{
+            width:80px;
+            height: 80px;
+            position:relative;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .delete.btn{
+            position: absolute;
+            top: 2px;
+            right: 4px;
+            cursor: pointer;
+            color: aliceblue;
+        }
+        #clearAll{
+            background:#555;
+               color: azure;
+        }
+    </style>
+</head>
+<body>
+   <button class="btn" style="background: red;" data-color="red">RED</button>
+   <button class="btn" style="background: green;" data-color="green">GREEN</button>  
+   <button class="btn" style="background:  blue;" data-color="blue">BLUE</button> 
+   <button class="btn" style="background: yellow;" data-color="yellow">YELLOW</button> 
+   <button class="btn" style="background: pink;" data-color="pink">PINK</button> 
+   <button class="btn" style="background: black;" data-color="black">BLACK</button> 
+   <br><br>
+   <button id="clearAll" class="btn">Clear All</button>
+   <div id="container"></div>
+   <script>
+    let buttons=document.querySelectorAll(".btn[data-color]");
+    let container=document.getElementById("#container");
+    let clearAllBtn=document.getElementById("#clearAll");
+    buttons.forEach(btn => {
+        btn.addEventListener("click",()=>{
+            let color=btn.getAttribute("data-color");
+            let box=document.createElement("div");
+            box.classList.add("box");
+            box.style.background=color;
+            let del=document.createElement("span");
+            del.classList.add("delete");
+           del.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ydnkqMjJgGc5-IZy4Jr-7sjHHDkqrT_lCQ&s"
+            box.appendChild(del);
+            container.appendchild(box);
+        });
+
+    });
+    clearAllBtn.addEventListener("click",()=>{
+        while(container.firstChild){
+            container.removeChild(container.firstChild);
+        }
+    });
+   </script>
+</body>
+</html>
