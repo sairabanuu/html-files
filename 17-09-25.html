@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>W3.CSS Portfolio Template 2</title>
+
+  <!-- W3.CSS stylesheet -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+
+  <!-- Google Font: Raleway -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+
+  <style>
+    body, h1, h2, h3, h4, h5 { font-family: 'Raleway', sans-serif; }
+    .w3-third img {
+      margin-bottom: -6px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .w3-third img:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+  <!-- Sidebar / Menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+    <br>
+    <h3 class="w3-padding-64 w3-center"><b>MY NAME</b></h3>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+    <span class="w3-left">MY NAME</span>
+    <a href="javascript:void(0)" class="w3-right" onclick="w3_open()">☰</a>
+  </header>
+
+  <!-- Overlay when the sidebar is open on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <!-- Page content -->
+  <div class="w3-main" style="margin-left:300px">
+
+    <!-- Portfolio Grid -->
+    <div class="w3-row w3-padding-64" id="portfolio">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="https://via.placeholder.com/400x300" alt="Project 1" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project One</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="https://via.placeholder.com/400x300" alt="Project 2" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project Two</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="https://via.placeholder.com/400x300" alt="Project 3" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project Three</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container">
+        <img src="https://via.placeholder.com/400x300" alt="Project 4" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project Four</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container">
+        <img src="https://via.placeholder.com/400x300" alt="Project 5" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project Five</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-container">
+        <img src="https://via.placeholder.com/400x300" alt="Project 6" style="width:100%" onclick="onClick(this)" />
+        <div class="w3-container w3-white">
+          <p><b>Project Six</b></p>
+          <p>Description of this project.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-container w3-padding-64" id="about">
+      <h2>About Me</h2>
+      <p>I am a designer living in City, Country. I love creating things for web and print.</p>
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-64" id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input" type="text" name="Name" required />
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input" type="email" name="Email" required />
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <textarea class="w3-input" name="Message" required></textarea>
+        </div>
+        <button type="submit" class="w3-button w3-black">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" style="max-width:90%" />
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Open image in modal
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      document.getElementById("caption").innerHTML = element.alt;
+    }
+  </script>
+
+</body>
+</html>
