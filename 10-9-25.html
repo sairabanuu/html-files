@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONS (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 180px;
+    height: 100vh;
+    background: #2e3241;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-item {
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    text-decoration: none;
+    background: #3c4153;
+    text-align: center;
+    border-bottom: 1px solid #2a2d39;
+    transition: 0.3s;
+}
+
+.menu-item i {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.menu-item:hover {
+    background: #50556b;
+}
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="profile">
+            <img src="https://i.ibb.co/7YwZ9yP/profile.jpg" alt="Profile">
+        </div>
+
+        <a href="#" class="menu-item">
+            <i class="fa fa-home"></i>
+            <span>HOME</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="fa fa-user"></i>
+            <span>ABOUT</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="fa fa-eye"></i>
+            <span>PHOTOS</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="fa fa-envelope"></i>
+            <span>CONTACT</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
