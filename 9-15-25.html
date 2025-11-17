@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Grid</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer Border */
+.outer-box {
+    width: 750px;
+    height: 400px;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inner Border */
+.inner-box {
+    width: 680px;
+    height: 330px;
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+}
+
+/* Circles */
+.circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="outer-box">
+    <div class="inner-box">
+
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+        <div class="circle">Impression</div>
+
+    </div>
+</div>
+
+</body>
+</html>
