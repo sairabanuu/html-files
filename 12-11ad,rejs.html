@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List App</title>
+</head>
+<body>
+
+  <h2>Student List</h2>
+
+  <input type="text" id="studentInput" placeholder="Enter student name">
+  <button id="addBtn">Add Name</button>
+  <button id="removeBtn">Remove Last</button>
+
+  <ul id="studentList"></ul>
+
+  <script>
+    // Selecting elements using querySelector
+    const input = document.querySelector("#studentInput");
+    const addBtn = document.querySelector("#addBtn");
+    const removeBtn = document.querySelector("#removeBtn");
+    const list = document.querySelector("#studentList");
+
+    // ADD student name
+    addBtn.addEventListener("click", () => {
+      const name = input.value.trim();
+
+      if (name === "") {
+        alert("Please enter a name");
+        return;
+      }
+
+      // Create <li> using createElement()
+      const li = document.createElement("li");
+      li.textContent = name;
+
+      // Append <li> to <ul>
+      list.appendChild(li);
+
+      input.value = ""; // clear box
+    });
+
+    // REMOVE last student name
+    removeBtn.addEventListener("click", () => {
+      // Access all <li> using querySelectorAll
+      const allItems = document.querySelectorAll("#studentList li");
+
+      if (allItems.length === 0) {
+        alert("No names to remove");
+        return;
+      }
+
+      // Remove the last <li> using removeChild()
+      list.removeChild(allItems[allItems.length - 1]);
+    });
+  </script>
+
+</body>
+</html>
+
+</html>

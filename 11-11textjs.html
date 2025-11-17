@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessing DOM Elements</title>
+</head>
+<body>
+
+    <p id="msg">Welcome Students</p>
+
+    <button onclick="printElements()">Print Element</button>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+
+        function printElements() {
+            console.clear();
+
+            let byId = document.getElementById("msg");
+            console.log("getElementById:", byId);
+
+       
+            let byTag = document.getElementsByTagName("p")[0];
+            console.log("getElementsByTagName:", byTag);
+
+
+            byId.className = "message";
+            let byClass = document.getElementsByClassName("message")[0];
+            console.log("getElementsByClassName:", byClass);
+
+
+            let qSel = document.querySelector("#msg");
+            console.log("querySelector:", qSel);
+
+        
+            let qSelAll = document.querySelectorAll("p")[0];
+            console.log("querySelectorAll:", qSelAll);
+        }
+
+
+        function changeText() {
+            document.getElementById("msg").textContent = "Hello Everyone!";
+        }
+
+     
+        function changeColor() {
+            document.querySelector("#msg").style.color = "blue";
+        }
+
+    </script>
+
+</body>
+</html>
